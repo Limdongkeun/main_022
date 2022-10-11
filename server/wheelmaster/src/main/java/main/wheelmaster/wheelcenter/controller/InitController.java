@@ -26,7 +26,6 @@ import java.util.Optional;
 @RequestMapping("api/wheel")
 public class InitController {
 
-
     private final WheelCenterService service;
 
     @GetMapping
