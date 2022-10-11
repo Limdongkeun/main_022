@@ -1,5 +1,6 @@
 package main.wheelmaster;
 
+import io.swagger.models.HttpMethod;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +19,11 @@ public class WheelMasterApplication {
 		WebMvcConfigurer webMvcConfigurer = new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://main-project-22.s3-website.ap-northeast-2.amazonaws.com");
+				registry.addMapping("/**").allowedOrigins("*")
+						.allowedMethods(HttpMethod.PATCH.name(), HttpMethod.POST.name(), HttpMethod.GET.name(), HttpMethod.DELETE.name(), HttpMethod.PUT.name())
+						.allowedHeaders("*")
+						.maxAge(3600)
+						.allowCredentials(false);
 			}
 		}; return webMvcConfigurer;
 	}
