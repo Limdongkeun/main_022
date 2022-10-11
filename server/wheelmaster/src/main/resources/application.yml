@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: ${DATASOURCE_URL:jdbc:mysql://database-1.cbmw5owzjiqy.ap-northeast-2.rds.amazonaws.com:3306/test?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8}
     username: ${DATASOURCE_USERNAME:root}
-    password: 
+    password: ${DATASOURCE_PASSWORD:team22wheel}
   jpa:
     database: mysql
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
