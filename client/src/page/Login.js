@@ -9,7 +9,7 @@ export default function Login() {
 
     const navigate = useNavigate();
 
-    const URL = 'http://ec2-54-180-29-60.ap-northeast-2.compute.amazonaws.com:8080/members/login'
+    const URL = 'ec2-3-38-101-126.ap-northeast-2.compute.amazonaws.com:8080/members/login'
 
     const handleEmail = (event) => {
         setEmail(event.target.value);

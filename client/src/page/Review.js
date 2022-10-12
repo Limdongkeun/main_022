@@ -17,7 +17,7 @@ export default function Review() {
     // delete error
     const handleDeleteReview = async () => {
         try {
-            // const response = await axios.delete(`http://localhost:4000/comments/${location.state.commentId}`)
+            const response = await axios.delete(`ec2-3-38-101-126.ap-northeast-2.compute.amazonaws.com:8080/comments/${location.state.commentId}`)
             if (true) {
                 console.log('후기 삭제')
                 navigate(-1)
