@@ -123,7 +123,7 @@ export default function FavoriteDetail() {
 
         const addFavoriteList = async () => {
             try {
-                const response = await axios.post('http://localhost:4000/favoriteList', {
+                const response = await axios.post('ec2-3-38-101-126.ap-northeast-2.compute.amazonaws.com:8080/favoriteList', {
                     시설명: location.state.place.시설명
                 });
                 if (response) {

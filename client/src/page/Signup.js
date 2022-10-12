@@ -11,7 +11,7 @@ export default function Signup() {
 
     const navigate = useNavigate();
 
-    const URL = 'http://ec2-54-180-29-60.ap-northeast-2.compute.amazonaws.com:8080';
+    const URL = 'ec2-3-38-101-126.ap-northeast-2.compute.amazonaws.com:8080';
 
     const handleUserName = (event) => {
         setUserName(event.target.value);
