@@ -22,6 +22,8 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import javax.validation.constraints.Positive;
 
+import java.util.HashMap;
+
 import static main.wheelmaster.member.SessionConst.LOGIN_MEMBER;
 
 
