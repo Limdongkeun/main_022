@@ -38,7 +38,7 @@ public class WebConfigSupport extends WebMvcConfigurationSupport {
                 .order(1)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/error", "/members/signup", "/index", "/", "api/wheel","/members/login", "/swagger-resources/**"
-                ,"/swagger-ui/**", "/v2/api-docs","/webjars/**","/swagger-ui.html/**");
+                ,"/swagger-ui/**", "/webjars/**","/swagger-ui.html/**");
     }
 
     @Override
