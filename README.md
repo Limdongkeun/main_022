@@ -117,9 +117,16 @@
 - 이동욱님의 AWS 책을 참고(?)해서 OAuth2 기능 개발 - 프런트엔드의 요구
 - View가 아닌 Restful API가 되도록 협의 
 
-### 현재 요구사항 명세서 진행상황
+### 현재 요구사항 명세서 
+![스크린샷 2022-10-17 오전 11 50 33](https://user-images.githubusercontent.com/86710265/196079078-2ee6a921-27c9-4322-bb15-bdb9e53eeb69.png)
 
-- ![images/specification1.png](images/specification1.png)
-![img.png](img.png)
+### 테이블 정의서
+![스크린샷 2022-10-17 오전 11 51 08](https://user-images.githubusercontent.com/86710265/196079099-bdb18bf1-a464-4c68-88bb-95b7afb787b9.png)
+
+### ERD
+![스크린샷 2022-10-16 오전 11 30 58](https://user-images.githubusercontent.com/86710265/196078622-c1126f87-a718-46a9-b2e1-570aa0c151a3.png)
+
+### Api 명세서
+![스크린샷 2022-10-17 오전 11 51 54](https://user-images.githubusercontent.com/86710265/196079119-9cc35743-06e8-4cad-8357-656232745ede.png)
 
 
