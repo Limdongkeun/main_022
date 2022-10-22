@@ -4,6 +4,7 @@ import main.wheelmaster.comment.dto.CommentRequestDto;
 import main.wheelmaster.comment.dto.CommentResponseDto;
 import main.wheelmaster.comment.entity.Comment;
 import main.wheelmaster.member.dto.MemberResponseDto;
+import main.wheelmaster.member.entity.Member;
 import main.wheelmaster.wheelcenter.entity.WheelCenter;
 import org.mapstruct.Mapper;
 
@@ -11,7 +12,8 @@ import org.mapstruct.Mapper;
 public interface CommentMapper {
     default Comment createCommentDtoToComment(CommentRequestDto.createCommentDto createCommentDto) {
         Comment comment = new Comment();
-        comment.setMember(createCommentDto.getMember());
+        Member member = new Member();
+        comment.setMember(member);
 
         WheelCenter wheelCenter = new WheelCenter();
         wheelCenter.setWheelCenterId(createCommentDto.getWheelCenterId());
@@ -32,7 +34,8 @@ public interface CommentMapper {
 
     default Comment updateCommentDtoToComment(CommentRequestDto.updateCommentDto updateCommentDto){
         Comment comment = new Comment();
-        comment.setMember(updateCommentDto.getMember());
+        Member member = new Member();
+        comment.setMember(member);
         WheelCenter wheelCenter = new WheelCenter();
         wheelCenter.setWheelCenterId(updateCommentDto.getWheelCenterId());
 

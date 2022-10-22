@@ -29,12 +29,12 @@ public class MemberDetails implements UserDetails {
         member.getRoleList().forEach(n -> {
             authorities.add(() -> n);
         });
-        return new MemberDetails(member.getMemberId(), member.getNickName(), member.getEmail(), authorities);
+        return new MemberDetails(member.getMemberId(), member.getEmail(), member.getNickName(), authorities);
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return this.roles;
     }
 
     @Override
@@ -44,26 +44,26 @@ public class MemberDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return null;
+        return this.email;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 }

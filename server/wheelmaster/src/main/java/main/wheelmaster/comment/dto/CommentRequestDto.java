@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import main.wheelmaster.Auth.MemberDetails;
 import main.wheelmaster.member.entity.Member;
 
 import javax.validation.constraints.NotEmpty;
@@ -22,7 +23,7 @@ public class CommentRequestDto {
         @NotEmpty
         private String comment;
 
-        private Member member;
+        private long memberId;
     }
 
     @Data
@@ -38,6 +39,6 @@ public class CommentRequestDto {
         @NotEmpty
         private String comment;
 
-        private Member member;
+        private long memberId;
     }
 }

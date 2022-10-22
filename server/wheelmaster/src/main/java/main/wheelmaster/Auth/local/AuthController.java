@@ -47,15 +47,13 @@ public class AuthController {
   public ResponseEntity login(@RequestBody @Valid MemberRequestDto.loginDto loginDto) {
     TokenResponseDto.Token response = authService.login(mapper.loginDtoToMember(loginDto));
     return new ResponseEntity<>(new SingleResponseWithMessageDto<>(response,
-      "SUCCESS"),
-      HttpStatus.OK);
+      "SUCCESS"), HttpStatus.OK);
   }
 
   @PostMapping("/reissue")
   public ResponseEntity reIssue(@RequestBody @Valid TokenRequestDto.ReIssue reIssue) {
     TokenResponseDto.ReIssueToken response =  authService.reIssue(reIssue);
     return new ResponseEntity<>(new SingleResponseWithMessageDto<>(response,
-      "SUCCESS"),
-      HttpStatus.OK);
+      "SUCCESS"), HttpStatus.OK);
   }
 }

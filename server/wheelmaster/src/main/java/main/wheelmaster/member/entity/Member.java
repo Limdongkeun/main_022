@@ -18,6 +18,7 @@ import java.util.List;
 @Setter
 @Entity
 @NoArgsConstructor
+@EntityListeners(value = MemberListner.class)
 public class Member{
 
     @Id

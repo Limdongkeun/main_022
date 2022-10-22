@@ -8,7 +8,7 @@ import javax.validation.constraints.Positive;
 
 @Data
 public class FavoritePlacePostDto {
-    private Member member;
+    private long memberId;
     @Positive
     private Long wheelCenterId;
     @NotBlank
@@ -19,12 +19,12 @@ public class FavoritePlacePostDto {
     @Positive
     private Double latitude;
 
-    public static FavoritePlacePostDto of(String facultyName, Member member, Double longitude, Double latitude, Long wheelCenterId)
+    public static FavoritePlacePostDto of(String facultyName, long memberId, Double longitude, Double latitude, Long wheelCenterId)
     {
         FavoritePlacePostDto favoritePlacePostDtoResult = new FavoritePlacePostDto();
 
         favoritePlacePostDtoResult.facultyName = facultyName;
-        favoritePlacePostDtoResult.member = member;
+        favoritePlacePostDtoResult.memberId = memberId;
         favoritePlacePostDtoResult.longitude = longitude;
         favoritePlacePostDtoResult.latitude = latitude;
         favoritePlacePostDtoResult.wheelCenterId = wheelCenterId;

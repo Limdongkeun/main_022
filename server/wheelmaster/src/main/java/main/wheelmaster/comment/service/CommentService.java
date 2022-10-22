@@ -26,7 +26,7 @@ public class CommentService {
     }
 
     public Comment updateComment(updateCommentDto updateCommentDto) {
-        Comment findComment = findVerifiedComment(updateCommentDto.getCommentId(), updateCommentDto.getMember().getMemberId());
+        Comment findComment = findVerifiedComment(updateCommentDto.getCommentId(), updateCommentDto.getMemberId());
         Optional.ofNullable(updateCommentDto.getComment()).ifPresent(findComment::setComment);
         return commentRepository.save(mapper.updateCommentDtoToComment(updateCommentDto));
     }

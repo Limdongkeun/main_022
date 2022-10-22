@@ -1,5 +1,6 @@
 package main.wheelmaster.vote.mapper;
 
+import main.wheelmaster.member.entity.Member;
 import main.wheelmaster.vote.dto.VoteGetDto;
 import main.wheelmaster.vote.dto.VotePostDto;
 import main.wheelmaster.vote.dto.VoteResponseDto;
@@ -12,11 +13,12 @@ public interface VoteMapper {
 
     public default Vote VotePostDtoToVote(VotePostDto votePostDto) {
         WheelCenter wheelCenter = new WheelCenter();
+        Member member = new Member();
         wheelCenter.setWheelCenterId(votePostDto.getWheelCenterId());
 
         Vote vote = new Vote();
         vote.setUpDown(votePostDto.getUpDown());
-        vote.setMember(votePostDto.getMember());
+        vote.setMember(member);
         vote.setWheelCenter(wheelCenter);
 
         return vote;
@@ -27,7 +29,8 @@ public interface VoteMapper {
         wheelCenter.setWheelCenterId(voteGetDto.getWheelCenterId());
 
         Vote vote = new Vote();
-        vote.setMember(voteGetDto.getMember());
+        Member member = new Member();
+        vote.setMember(member);
         vote.setWheelCenter(wheelCenter);
         return vote;
     }

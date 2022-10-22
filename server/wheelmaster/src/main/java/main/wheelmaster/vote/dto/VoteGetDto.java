@@ -8,6 +8,6 @@ import main.wheelmaster.member.entity.Member;
 @AllArgsConstructor
 @NoArgsConstructor
 public class VoteGetDto {
-    private Member member;
+    private long memberId;
     private Long wheelCenterId;
 }
