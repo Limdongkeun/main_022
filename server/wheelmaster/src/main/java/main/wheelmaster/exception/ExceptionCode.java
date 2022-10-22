@@ -11,7 +11,11 @@ public enum ExceptionCode {
   VOTE_ALREADY_EXISTS(409, "Vote already exists"),
   VOTE_NOT_FOUND(404, "Vote not found"),
   FAVORITE_PLACE_ALREADY_EXISTS(409, "Favorite place already exists"),
-  FAVORITE_PLACE_NOT_FOUND(404, "Favorite place not found");
+  FAVORITE_PLACE_NOT_FOUND(404, "Favorite place not found"),
+  ROLE_IS_NOT_EXISTS(403, "Role is not exists"),
+  PASSWORD_INCORRECT(404, "Password Incorrect"),
+  TOKEN_IS_INVALID(401, "Token is invalid"),
+  REFRESH_TOKEN_IS_EXPIRED(403, "Refresh Token is expired");
 
 
 

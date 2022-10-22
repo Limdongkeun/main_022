@@ -9,6 +9,8 @@ import main.wheelmaster.vote.entity.Vote;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -31,6 +33,15 @@ public class Member{
     private String nickName;
     @Column(length = 50, unique = true)
     private String phoneNumber;
+
+    private String provider;
+    private String roles;
+
+    public List<String> getRoleList(){
+        if (this.roles.length() > 0)
+            return Arrays.asList(this.roles.split(","));
+        return new ArrayList<>();
+    }
 
     @OneToMany(mappedBy = "member",fetch = FetchType.LAZY)
     private List<Comment> comments;

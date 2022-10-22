@@ -16,7 +16,7 @@ public class WheelMasterApplication {
 
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
-		WebMvcConfigurer webMvcConfigurer = new WebMvcConfigurer() {
+		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**").allowedOrigins("*")
@@ -25,6 +25,6 @@ public class WheelMasterApplication {
 						.maxAge(3600)
 						.allowCredentials(false);
 			}
-		}; return webMvcConfigurer;
+		};
 	}
 }
