@@ -116,8 +116,8 @@
 - View가 아닌 Restful API가 되도록 협의 
  
  ## 리팩토링 
-- [ ] Session -> JWT로 리팩토링
-- [ ] 로그인한 회원이면 토큰 발급
+- [x] Session -> JWT로 리팩토링
+- [x] 로그인한 회원이면 토큰 발급
 - [ ] 토큰을 헤더에 담아 정보요청
 - [ ] filter,interceptor - > Spring security 적용해보기
 
