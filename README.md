@@ -82,8 +82,6 @@
 
 
 ## 기능 요구사항 
-> front-end
- 
  
 > back-end
  1. 회원가입 & 로그인
@@ -116,6 +114,12 @@
 - 백엔드에 추가하기로 했던 스프링 시큐리티 기능을 쓰지 않을 것을 협의해야 함
 - 이동욱님의 AWS 책을 참고(?)해서 OAuth2 기능 개발 - 프런트엔드의 요구
 - View가 아닌 Restful API가 되도록 협의 
+ 
+ ## 리팩토링 
+- [ ] Session -> JWT로 리팩토링
+- [ ] 로그인한 회원이면 토큰 발급
+- [ ] 토큰을 헤더에 담아 정보요청
+- [ ] filter,interceptor - > Spring security 적용해보기
 
 ### 현재 요구사항 명세서 
 ![스크린샷 2022-10-17 오전 11 50 33](https://user-images.githubusercontent.com/86710265/196079078-2ee6a921-27c9-4322-bb15-bdb9e53eeb69.png)
