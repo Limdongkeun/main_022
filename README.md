@@ -120,6 +120,7 @@
 - [x] 로그인한 회원이면 토큰 발급
 - [ ] 토큰을 헤더에 담아 정보요청
 - [ ] filter,interceptor - > Spring security 적용해보기
+- [ ] Elastic Search 도입 시도
 
 ### 현재 요구사항 명세서 
 ![스크린샷 2022-10-17 오전 11 50 33](https://user-images.githubusercontent.com/86710265/196079078-2ee6a921-27c9-4322-bb15-bdb9e53eeb69.png)
